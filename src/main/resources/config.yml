@@ -1,0 +1,141 @@
+############################################################
+# +------------------------------------------------------+ #
+# |                MoreCmd (Config.yml)                  | #
+# +------------------------------------------------------+ #
+############################################################
+
+# ------------------------- #
+#       Entity Limit        #
+# ------------------------- #
+# Add limit for entity per chunk (block spawn from eggs/spawners)
+entity-limits:
+  COW: 10
+  ZOMBIE: 15
+  CREEPER: 5
+  VILLAGER: 2
+
+
+# ------------------------- #
+#        Block Limit        #
+# ------------------------- #
+# Add limit for blocks per chunk
+block-limits:
+  CHEST: 20
+  HOPPER: 50
+  SPAWNER: 10
+  #REDSTONE_WIRE: 100
+  #PISTON: 25
+
+
+# ------------------------- #
+#        Zone Purge         #
+# ------------------------- #
+zone-purge:
+  purge-interval: 30     # After how long (in seconds) are entities exceeding the limit purged?
+  warning-delay: 10      # After how much time remaining should the purge message be displayed?
+  VILLAGER:
+    radius: 50
+    max: 2
+  #WARDEN:
+    #radius: 100 (blocks)
+    #max: 5 (entity per area/radius)
+
+
+# ------------------------- #
+#     Furnace Settings      #
+# ------------------------- #
+
+# Set cooldown per rank (can add as many as you want)
+
+# Don't forget to give permission to the rank in LuckPerms !
+# morecmd.furnace | morecmd.furnaceall (To use the commands)
+# morecmd.furnace.<rank_name> | morecmd.furnaceall.<rank_name> (To associate the cooldown with the rank)
+# Players with ‘*’ permission will have the lowest cooldowns.
+# You can create an admin cooldown with a cooldown that only they will have.
+cooldowns:
+  furnace:
+    default: 60
+    sentinelle: 60
+    berserker: 45
+    pionnier: 30
+    admin: 10
+
+  furnaceall:
+    default: 60
+    sentinelle: 60
+    berserker: 45
+    pionnier: 30
+    admin: 10
+
+xp-drop:
+  enabled: true
+  mode: per-item   # per-item OR per-result
+  xp-delivery: drop  # drop OR add
+
+
+# ------------------------- #
+#     Lumber Settings       #
+# ------------------------- #
+
+# Axe required to use the command
+# Trees that can be broken with the command
+lumberjack:
+  axes:
+    - DIAMOND_AXE
+    - NETHERITE_AXE
+  trees:
+    - OAK_LOG
+    - BIRCH_LOG
+    - SPRUCE_LOG
+    - MANGROVE_LOG
+    - DARK_OAK_LOG
+    - CHERRY_LOG
+    - JUNGLE_LOG
+
+# ------------------------- #
+#     Farmer Settings       #
+# ------------------------- #
+
+farmer:
+  farmer-slot: 8 # Slot where farmer hoe drop (0-8 = slotbar)
+  hoe-name: "&aFarmer Hoe"
+  hoe-lore:
+    - "&7Break and replant"
+    - "&7allowed crops !"
+  fortune-level: 5 # Can be higher than vanilla (3) !
+  allowed-crops:
+    - WHEAT
+    - CARROTS
+    - POTATOES
+    - BEETROOTS
+    - NETHER_WART
+# Command that will be blocked when holding the FarmerHoe in hand
+# !! WARNING !! The hoe cannot be moved from its slot, so if someone sells it on the auction house and a player buys it
+#               they will find themselves stuck in the slot where they received it!
+  blocked-commands:
+    - ah sell
+    #- anothercommand
+
+# ------------------------- #
+#      Miner Settings       #
+# ------------------------- #
+
+miner:
+  allowed-tools:
+    - DIAMOND_PICKAXE
+    - NETHERITE_PICKAXE
+  allowed-ores:
+    - DIAMOND_ORE
+    - DEEPSLATE_DIAMOND_ORE
+    - IRON_ORE
+    - DEEPSLATE_IRON_ORE
+    - GOLD_ORE
+    - DEEPSLATE_GOLD_ORE
+    - COAL_ORE
+    - DEEPSLATE_COAL_ORE
+    - EMERALD_ORE
+    - DEEPSLATE_EMERALD_ORE
+  # The maximum number of blocks that can be broken
+  max-blocks: 25
+  # Cooldown beetwen 2 ores break (in seconds)
+  break-cooldown-seconds: 5

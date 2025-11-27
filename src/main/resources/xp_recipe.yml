@@ -1,0 +1,31 @@
+############################################################
+# +------------------------------------------------------+ #
+# |             MoreCmd (Xp_Recipes.yml)                 | #
+# +------------------------------------------------------+ #
+############################################################
+
+# XP per item (mode global per-item)
+per-item: 0.5
+
+# XP per result (mode per-result)
+# Each item can have different xp amount
+# Enter the result of the recipe to get XP (recipes.yml)
+per-result:
+  # Ores #
+  COPPER_INGOT: 1
+  IRON_INGOT: 1
+  GOLD_INGOT: 1
+  CHARCOAL: 1
+  DIAMOND: 10
+  EMERALD: 10
+  # Food #
+  COOKED_BEEF: 0.2
+  COOKED_CHICKEN: 0.2
+  COOKED_PORKCHOP: 0.2
+  COOKED_FISH: 0.2
+  BAKED_POTATO: 0.1
+  # Blocks #
+  GLASS: 0.15
+  STONE: 0.15
+  # Custom / Rare Items #
+  NETHER_STAR: 10

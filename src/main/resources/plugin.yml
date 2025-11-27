@@ -1,0 +1,37 @@
+name: MoreCmd
+version: '1.4.0'
+main: me.funtage.morecmd.MoreCmd
+author: FunTage
+api-version: '1.21'
+
+commands:
+  morecmd:
+    description: Reloads the plugin
+    usage: /morecmd reload
+    permission: morecmd.reload
+    permission-message: You do not have permission!
+  furnace:
+    description: Smelt the item in hand
+    usage: /furnace
+    permission: morecmd.furnace.use
+    permission-message: You do not have permission!
+  furnaceall:
+    description: Smelt all allowed items in inventory
+    usage: /furnaceall
+    permission: morecmd.furnaceall.use
+    permission-message: You do not have permission!
+  bucheron:
+    description: Activate/deactivate Lumberjack mode
+    usage: /bucheron <on|off>
+    permission: morecmd.bucheron.use
+    permission-message: You do not have permission!
+  farmer:
+    description: Active ou désactive le mode farmer
+    usage: /farmer <on|off>
+    permission: morecmd.farmer.use
+    permission-message: You do not have permission!
+  miner:
+    description: Active/Deactivate Miner (VeinMiner) mode
+    usage: /miner <on|off>
+    permission: morecmd.miner.use
+    permission-message: You do not have permission!

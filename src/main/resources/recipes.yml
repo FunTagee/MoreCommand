@@ -1,0 +1,52 @@
+############################################################
+# +------------------------------------------------------+ #
+# |               MoreCmd (Recipes.yml)                  | #
+# +------------------------------------------------------+ #
+############################################################
+
+# Types the recipe you want to work with /furnace ; /furnaceall commands
+# ITEM: RESULT_ITEM
+# You can make custom recipe by placing differents results than vanilla
+# RAW_IRON: DIAMOND (Get diamond from raw iron by /furnace the item)
+# You can even make custom recipe that's not in vanilla
+# WITHER_SKELETON_SKULL: NETHER_STAR (/furnace skulls to get stars)
+
+recipes:
+  # Ores #
+  IRON_ORE: IRON_INGOT
+  GOLD_ORE: GOLD_INGOT
+  COPPER_ORE: COPPER_INGOT
+  DEEPSLATE_IRON_ORE: IRON_INGOT
+  DEEPSLATE_GOLD_ORE: GOLD_INGOT
+  DEEPSLATE_COPPER_ORE: COPPER_INGOT
+  RAW_IRON: IRON_INGOT
+  RAW_GOLD: GOLD_INGOT
+  RAW_COPPER: COPPER_INGOT
+  # Food #
+  BEEF: COOKED_BEEF
+  PORKCHOP: COOKED_PORKCHOP
+  CHICKEN: COOKED_CHICKEN
+  MUTTON: COOKED_MUTTON
+  RABBIT: COOKED_RABBIT
+  POTATO: BAKED_POTATO
+  COD: COOKED_COD
+  SALMON: COOKED_SALMON
+  TROPICAL_FISH: COOKED_TROPICAL_FISH
+  # Blocks #
+  OAK_LOG: CHARCOAL
+  SPRUCE_LOG: CHARCOAL
+  BIRCH_LOG: CHARCOAL
+  JUNGLE_LOG: CHARCOAL
+  ACACIA_LOG: CHARCOAL
+  DARK_OAK_LOG: CHARCOAL
+  MANGROVE_LOG: CHARCOAL
+  CHERRY_LOG: CHARCOAL
+  SAND: GLASS
+  RED_SAND: GLASS
+  CLAY_BALL: BRICK
+  NETHER_GOLD_ORE: GOLD_INGOT
+  QUARTZ_ORE: QUARTZ
+  NETHERRACK: NETHER_BRICK
+  # Custom #
+  WITHER_SKELETON_SKULL: NETHER_STAR
+  TNT: CREEPER_SPAWN_EGG

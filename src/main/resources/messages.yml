@@ -1,0 +1,71 @@
+############################################################
+# +------------------------------------------------------+ #
+# |              MoreCmd (Messages.yml)                  | #
+# +------------------------------------------------------+ #
+############################################################
+
+prefix: "&8[&bMoreCmd&8] "
+
+# ------------------------- #
+#     Global Messages       #
+# ------------------------- #
+no-permission: "&cYou do not have permission."
+reload-success: "&aConfiguration reloaded!"
+
+# ------------------------- #
+#      Limit Messages       #
+# ------------------------- #
+block-limit: "&cYou cannot place more of this block in this chunk!"
+entity-limit: "&cToo many of this entity type in this chunk!"
+
+# ------------------------- #
+#      Purge Messages       #
+# ------------------------- #
+purge-warning: "&cAttention ! &e%count%/%limit% %type% dans la zone, purge dans %seconds%s !"
+purge-done: "&aPurge terminée pour &e%type%&a."
+purge-cancelled: "&aPurge annulée : &e%count%/%limit% %type%&a dans la zone."
+
+# ------------------------- #
+# Furnace Commands Messages #
+# ------------------------- #
+no-item-in-hand: "&cYou must hold an item in your hand!"
+not-smeltable: "&cThis item cannot be smelted: &e%item%"
+furnace_success: "&aSuccessfully smelted &e%amount% %item% &ainto &e%result%&a!"
+furnaceall_success: "&aSuccessfully smelted &e%count% &aitems!"
+furnaceall_skipped: "&e%count% &citems could not be smelted!"
+furnaceall_none: "&cNo smeltable items found."
+xp_received: "&aYou received &6%xp% &aXP from smelting!"
+furnace_cooldown: "&cYou must wait &e%seconds%s &cbefore using this command again."
+
+# ------------------------- #
+# Lumber Commands Messages  #
+# ------------------------- #
+lumber_usage: "&fUsage: /bucheron &8<&aon&8|&coff&8>"
+lumber_enabled: "&aLumberjack mode enabled!"
+lumber_already_on: "&eLumberjack mode is already enabled!"
+lumber_disabled: "&cLumberjack mode disabled!"
+lumber_already_off: "&eLumberjack mode is already disabled!"
+lumber_wrong_tool: "&cYou must hold an axe to use Lumberjack mode!"
+tree_cut: "&eYou chopped down the whole tree!"
+
+# ------------------------- #
+# Farmer Commands Messages  #
+# ------------------------- #
+farmer_usage: "&eUsage: /farmer <on|off>"
+farmer_enabled: "&aFarmer Hoe activated!"
+farmer_already_on: "Farmer mode is already enabled!"
+farmer_disabled: "&cFarmer Hoe deactivated."
+farmer_already_off: "Farmer mode is already disabled!"
+farmer_command_blocked: "&cYou cannot use this command while holding the Farmer Hoe!"
+slot-not-empty: "&cCannot activate the Farmer Hoe: the slot is occupied."
+
+# ------------------------- #
+#  Miner Commands Messages  #
+# ------------------------- #
+miner_usage: "&cUsage: /miner <on/off>"
+miner_enabled: "&aMiner mode enabled!"
+miner_already_on: "&eMiner mode is already active."
+miner_disabled: "&cMiner mode disabled!"
+miner_already_off: "&eMiner mode is already inactive."
+miner_wrong_tool: "&cThis tool is not allowed for Miner mode!"
+miner_cooldown: "&cYou must wait %time% more seconds before breaking another block!"
