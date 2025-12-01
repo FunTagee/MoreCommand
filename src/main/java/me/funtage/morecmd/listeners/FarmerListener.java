@@ -150,6 +150,6 @@ public class FarmerListener implements Listener {
                     block.setBlockData(ageable, false);
                 }
             }
-        }.runTaskLater(plugin, 40L);
+        }.runTaskLater(plugin, 20L);
     }
 }
