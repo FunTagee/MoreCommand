@@ -40,27 +40,34 @@ public class MinerListener implements Listener {
             return;
         }
 
-        // Cooldown joueur
-        long now = System.currentTimeMillis();
-        int cooldownSeconds = plugin.getConfig().getInt("miner.break-cooldown-seconds", 5);
-        if (minerCooldowns.containsKey(p.getUniqueId())) {
-            long lastBreak = minerCooldowns.get(p.getUniqueId());
-            long remainingMs = (lastBreak + cooldownSeconds * 1000L) - now;
-            if (remainingMs > 0) {
-                long remainingSec = (remainingMs + 999) / 1000; // arrondi supérieur
-                p.sendMessage(MessageManager.getMessage("miner_cooldown").replace("%time%", String.valueOf(remainingSec)));
-                event.setCancelled(true);
-                return;
-            }
-        }
-        minerCooldowns.put(p.getUniqueId(), now);
-
         Block block = event.getBlock();
         Material type = block.getType();
 
         // Vérifier si le minerai est autorisé via config
         List<String> allowedOres = plugin.getConfig().getStringList("miner.allowed-ores");
         if (allowedOres == null || allowedOres.isEmpty()) return;
+
+        // ❗ Cooldown SEULEMENT si bloc = minerai autorisé
+        if (allowedOres.contains(type.name())) {
+            long now = System.currentTimeMillis();
+            int cooldownSeconds = plugin.getConfig().getInt("miner.break-cooldown-seconds", 5);
+
+            if (minerCooldowns.containsKey(p.getUniqueId())) {
+                long lastBreak = minerCooldowns.get(p.getUniqueId());
+                long remainingMs = (lastBreak + cooldownSeconds * 1000L) - now;
+
+                if (remainingMs > 0) {
+                    long remainingSec = (remainingMs + 999) / 1000; // arrondi supérieur
+                    p.sendMessage(MessageManager.getMessage("miner_cooldown")
+                            .replace("%time%", String.valueOf(remainingSec)));
+                    event.setCancelled(true);
+                    return;
+                }
+            }
+            minerCooldowns.put(p.getUniqueId(), now);
+        }
+
+        // Si ce n'est PAS un minerai autorisé → pas de cooldown, pas de veinmine
         if (!allowedOres.contains(type.name())) return;
 
         // Annuler l'événement original pour gérer nous-même

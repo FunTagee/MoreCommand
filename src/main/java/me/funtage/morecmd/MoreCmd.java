@@ -1,5 +1,3 @@
-// VERSION MODIFIÉE DE MoreCmd AVEC INTEGRATION DU MODE MINER
-
 package me.funtage.morecmd;
 
 import java.io.File;
